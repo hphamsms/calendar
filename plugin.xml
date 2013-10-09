@@ -12,7 +12,7 @@
     <keywords>phonegap,calendar</keywords>
 
     <js-module src="www/myCalendar.js" name="Calendar">
-        <clobbers target="Calendar" />
+        <clobbers target="window.calendar" />
     </js-module>
     
     <!-- android -->
