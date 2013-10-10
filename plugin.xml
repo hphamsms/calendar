@@ -42,4 +42,21 @@
 	
     </platform>
     
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Calendar">
+                <param name="ios-package" value="SMSCalendar" />
+            </feature>
+        </config-file>
+        
+        <js-module src="www/ios/myCalendar.js" name="SMSCalendar">
+            <clobbers target="SMSCalendar" />
+        </js-module>
+        
+        <header-file src="src/ios/SMSCalendar.h" />
+        <source-file src="src/ios/SMSCalendar.m" />
+        <framework src="EventKit.framework" />
+    </platform>
+    
 </plugin>
