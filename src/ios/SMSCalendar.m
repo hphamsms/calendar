@@ -48,7 +48,7 @@
                     NSString* endDateTimeStr = [eventInfo objectForKey:@"endDateTime"];
                     
                     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-                    [dateFormatter setDateFormat:@"yyyyMMdd HH:mm:ss"];
+                    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
                     
                     addEvent.startDate = [dateFormatter dateFromString:startDateTimeStr];
                     addEvent.endDate = [dateFormatter dateFromString:endDateTimeStr];
@@ -61,7 +61,7 @@
                     
                     [eventStore saveEvent:addEvent span:EKSpanThisEvent error:nil];
                     
-                    [self showAlertWithText:@"Event added"];
+                    //[self showAlertWithText:@"Event added"];
                 }
             });
         }];
