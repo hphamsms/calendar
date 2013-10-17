@@ -16,7 +16,9 @@ public class SmsmtCalendarPlugin extends CordovaPlugin {
 			if (ACTION_ADD_CALENDAR_ENTRY.equals(action)) {
 				JSONObject jsonArgs = args.getJSONObject(0);
 				CalendarUtils calUtils = CalendarUtils.getInstance(this.cordova.getActivity());
-				//calUtils.createLocalCalendar();
+				if (!calUtils.isCalendarExisted()) {
+					calUtils.createLocalCalendar();
+				}
 				calUtils.createEvent(jsonArgs);
 				callbackContext.success();
 				return true;

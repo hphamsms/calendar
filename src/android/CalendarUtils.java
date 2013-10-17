@@ -143,6 +143,15 @@ public class CalendarUtils {
 		return -1;
 	}
 	
+	
+	public boolean isCalendarExisted() {
+		Log.i("calendarUtils", "isCalendarExisted(): " + "begin at the begining");
+		if (getCalendarId() > -1) {
+			return true;
+		}
+		return false;
+	}
+	
 	/*
 	 * TODO: Find more 
 	private void getTheEvent(long eventId) {
