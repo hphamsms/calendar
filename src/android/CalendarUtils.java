@@ -97,7 +97,7 @@ public class CalendarUtils {
 		            insert(Events.CONTENT_URI, values);
 		long eventId = Long.valueOf(uri.getLastPathSegment());
 		Log.i("calendarUtils", "New event with event_id is created: " + eventId);
-		Long reminderMins =  arg_object.getLong("remiderMins");
+		Long reminderMins =  arg_object.getLong("reminderMins");
 		addReminder(eventId, reminderMins);
 		return eventId;
 	}

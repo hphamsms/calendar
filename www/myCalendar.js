@@ -11,7 +11,7 @@ var calendarPlugin = {
                 "eventLocation": location,
                 "startTimeMillis": startDate.getTime(),
                 "endTimeMillis": endDate.getTime(),
-                "remiderMins": reminderMins
+                "reminderMins": reminderMins
             }]
         ); 
      }
