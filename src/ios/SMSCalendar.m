@@ -55,9 +55,9 @@
                     
                     addEvent.location = [eventInfo objectForKey:@"eventLocation"];
                     
-                    NSInteger minutesReminder = (NSInteger)[eventInfo valueForKey:@"reminderMins"];
+                    NSNumber* minutesReminder = [eventInfo valueForKey:@"reminderMins"];
                     
-                    [addEvent addAlarm:[EKAlarm alarmWithRelativeOffset:60.0f * - minutesReminder]];
+                    [addEvent addAlarm:[EKAlarm alarmWithRelativeOffset:0 - (60.0f * [minutesReminder integerValue])]];
                     
                     [eventStore saveEvent:addEvent span:EKSpanThisEvent error:nil];
                     
